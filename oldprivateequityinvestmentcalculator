@@ -1,0 +1,37 @@
+currentNetRevenue=float(input("enter your net revenue:"))
+pastNetRevenue=float(input("enter your last year's net revenue:"))
+ebitda= float(input("enter your ebitda:"))
+debt=float(input("enter your debt:"))
+revenueGrowthRate = ((currentNetRevenue)-(pastNetRevenue))/(pastNetRevenue)*100
+ebitdaMargin=(ebitda/currentNetRevenue)*100
+debtEbitdaRatioCheck=ebitda/debt
+if ebitdaMargin>20 and revenueGrowthRate>=15:
+   print("your company is a prime investment candidate")
+   if debtEbitdaRatioCheck<3:
+        print("your debt-to-EBITDA ratio check is favourable")
+   elif 3<debtEbitdaRatioCheck<5:
+        print("your debt-to-EBITDA ratio check is manageable")
+   elif debtEbitdaRatioCheck>5:
+        print("your debt-to-EBITDA ratio check is concerning")
+elif 15<=ebitdaMargin<=19 and 10<=revenueGrowthRate<=14:
+    print("your company is a potential investment candidate")
+    if debtEbitdaRatioCheck<3:
+        print("your debt-to-EBITDA ratio check is favourable")
+    elif 3<debtEbitdaRatioCheck<5:
+        print("your debt-to-EBITDA ratio check is manageable")
+    elif debtEbitdaRatioCheck>5:
+        print("your debt-to-EBITDA ratio check is concerning")
+
+elif ebitdaMargin<15 and revenueGrowthRate<10:
+    print("your company is a not a suitable investment candidate")
+    if debtEbitdaRatioCheck<3:
+        print("your debt-to-EBITDA ratio check is favourable")
+    elif 3<debtEbitdaRatioCheck<5:
+        print("your debt-to-EBITDA ratio check is manageable")
+    elif debtEbitdaRatioCheck>5:
+        print("your debt-to-EBITDA ratio check is concerning")
+
+
+
+
+
