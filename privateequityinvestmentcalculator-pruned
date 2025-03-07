@@ -1,0 +1,23 @@
+revenueGrowthRate=float(input("enter your net revenue growth rate:"))
+ebitda= float(input("enter your ebitda:"))
+debt=float(input("enter your debt:"))
+ebitdaMargin=(ebitda/currentNetRevenue)*100
+debtEbitdaRatioCheck=ebitda/debt
+if ebitdaMargin>20 and revenueGrowthRate>=15:
+    investmentCategory = "prime investment candidate"
+elif 15<=ebitdaMargin<=19 and 10<=revenueGrowthRate<=14:
+    investmentCategory = "potential investment candidate"
+elif ebitdaMargin<15 and revenueGrowthRate<10:
+    investmentCategory = "unsuitable investment candidate"
+if debtEbitdaRatioCheck<3:
+   derc="favourable"
+elif 3<debtEbitdaRatioCheck<5:
+       derc="manageable"
+elif debtEbitdaRatioCheck>5:
+       derc="concerning"
+print(f"\n your investment category  is: {investmentCategory}")
+print(f"\n your Debt Ebitda Ratio check is: {derc}")
+
+
+
+
